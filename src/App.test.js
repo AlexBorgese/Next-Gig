@@ -1,9 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
 import App from './App';
+import Lobby from './components/Lobby';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('Given the App component', () => {
+	let component;
+
+	beforeEach(() => {
+		component = shallow(<App />);
+	});
+
+	it('should render the Lobby Component', () => {
+		expect(component.find(Lobby).length).toEqual(1);
+	});
 });
