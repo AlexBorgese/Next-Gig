@@ -8,7 +8,11 @@ describe('Given the Lobby Component', () => {
 	let component;
 
 	beforeEach(() => {
-		component = shallow(<Lobby />);
+		component = shallow(
+			<Lobby>
+				<Tile />
+			</Lobby>
+		);
 	});
 
 	it('should render a div with the correct classname', () => {
@@ -16,6 +20,6 @@ describe('Given the Lobby Component', () => {
 	});
 
 	it('should render a tile component', () => {
-		expect(component.find(Tile).length).toEqual(1);
+		expect(component.find('.lobby').prop('children')).toEqual(<Tile />);
 	});
 });

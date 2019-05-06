@@ -1,12 +1,8 @@
 import React from 'react';
 
-import Tile from '../Tile';
-
-const Lobby = () => (
-	<div className="lobby">
-		Next Gig...
-		<Tile />
-	</div>
-);
+const Lobby = ({ children }) => {
+	console.log(children);
+	return <div className="lobby">{children}</div>;
+};
 
 export default Lobby;
