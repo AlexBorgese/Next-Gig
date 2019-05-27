@@ -6,7 +6,9 @@ import Section from './section/section';
 import './App.css';
 
 const App = () => {
-	const sections = siteLayout.map(layout => <Section layout={layout} />);
+	const sections = siteLayout.map(layout => (
+		<Section key={layout.id} layout={layout} />
+	));
 
 	return <div className="App">{sections}</div>;
 };

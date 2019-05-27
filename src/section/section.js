@@ -9,8 +9,7 @@ const Section = ({ layout }) => {
 			components[layout.component],
 			layout.props,
 			((layout.props || {}).children || []).map(component => {
-				console.log(component);
-				this.createSection(component);
+				return createSection(component);
 			})
 		);
 	};
@@ -19,7 +18,7 @@ const Section = ({ layout }) => {
 };
 
 Section.propTypes = {
-	layout: PropTypes.array
+	layout: PropTypes.object
 };
 
 export default Section;
