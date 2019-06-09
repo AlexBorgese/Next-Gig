@@ -8,7 +8,8 @@ export default [
 					id: 'tile',
 					component: 'Tile',
 					props: {
-						Title: 'Rings of Saturn'
+						Title: 'Rings of Saturn',
+						content: 'They are really good'
 					}
 				},
 				{
