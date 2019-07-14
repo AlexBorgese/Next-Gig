@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import Tile from './Tile';
 
 const props = {
@@ -7,11 +7,17 @@ const props = {
 	content: 'words and that'
 };
 
+fetch.mockResponseOnce(JSON.stringify({ data: '12345' }));
+
 describe('Given the Tile component', () => {
 	let component;
 
 	beforeEach(() => {
-		component = shallow(<Tile {...props} />);
+		component = mount(<Tile {...props} />);
+	});
+
+	it('should request data on mount', () => {
+		expect(fetch.mock.calls.length).toEqual(1);
 	});
 
 	it('should render a tile with the correct text', () => {
