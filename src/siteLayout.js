@@ -32,7 +32,7 @@ export default [
 					id: 'tile3',
 					component: 'Tile',
 					props: {
-						Title: 'Rings of Saturn',
+						Title: 'metallica',
 						date: '28/10'
 					}
 				}

@@ -19,7 +19,11 @@ describe('Given the Lobby Component', () => {
 		expect(component.find('.lobby').length).toEqual(1);
 	});
 
+	it('should add the correct title', () => {
+		expect(component.find('h1').text()).toEqual('NEXT GIG');
+	});
+
 	it('should render a tile component', () => {
-		expect(component.find('.lobby').prop('children')).toEqual(<Tile />);
+		expect(component.find('.content').prop('children')).toEqual(<Tile />);
 	});
 });
