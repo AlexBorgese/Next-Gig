@@ -30,7 +30,7 @@
 		"jest-enzyme": "^7.0.2"
 	},
 	"resolutions": {
-		"babel-jest": "24.8.0"
+		"babel-jest": "24.7.1"
 	},
 	"browserslist": {
 		"production": [

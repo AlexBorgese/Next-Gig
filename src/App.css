@@ -49,6 +49,12 @@ img {
     background-size: cover;
 }
 
+span {
+    right: 0;
+    position: absolute;
+    padding: 8px;
+}
+
 .item {
     flex: 1 1;
     align-items: center;
@@ -60,6 +66,7 @@ img {
     max-height: 33%;
     margin: 10px;
     overflow: hidden;
+    position: relative;
 }
 
 @keyframes App-logo-spin {

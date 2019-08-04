@@ -4,6 +4,7 @@ import Tile from './Tile';
 
 const props = {
 	Title: 'Title',
+	date: '28/09',
 	data: {}
 };
 
@@ -43,6 +44,10 @@ describe('Given the Tile component', () => {
 
 		it('should render the images', () => {
 			expect(component.find('img').prop('src')).toEqual('some/image.jpg');
+		});
+
+		it('should render the date', () => {
+			expect(component.find('span').prop('children')).toEqual('28/09');
 		});
 	});
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Tile = ({ Title, data }) => {
+const Tile = ({ Title, date, data }) => {
 	const formatArray = array => {
 		return array.map((element, index) => {
 			if (index === array.length - 1) {
@@ -13,6 +13,7 @@ const Tile = ({ Title, data }) => {
 	return (
 		<div className="item">
 			<h1>{Title}</h1>
+			<span>{date}</span>
 			{data.artists && <p>{formatArray(data.artists.items[0].genres)}</p>}
 			{data.artists && (
 				<img
@@ -26,6 +27,7 @@ const Tile = ({ Title, data }) => {
 
 Tile.propTypes = {
 	Title: PropTypes.string,
+	date: PropTypes.string,
 	data: PropTypes.object
 };
 

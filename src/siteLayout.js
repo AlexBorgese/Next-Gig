@@ -9,28 +9,31 @@ export default [
 					component: 'Tile',
 					props: {
 						Title: 'Rings of Saturn',
-						content: 'They are really good'
+						date: '28/09'
 					}
 				},
 				{
 					id: 'tile1',
 					component: 'Tile',
 					props: {
-						Title: 'Black Tongue'
+						Title: 'Black Tongue',
+						date: '29/09'
 					}
 				},
 				{
-					id: 'tile1',
+					id: 'tile2',
 					component: 'Tile',
 					props: {
-						Title: 'Queen'
+						Title: 'Queen',
+						date: '13/10'
 					}
 				},
 				{
-					id: 'tile1',
+					id: 'tile3',
 					component: 'Tile',
 					props: {
-						Title: 'Rings of Saturn'
+						Title: 'Rings of Saturn',
+						date: '28/10'
 					}
 				}
 			]
