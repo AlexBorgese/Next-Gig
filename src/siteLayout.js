@@ -16,14 +16,14 @@ export default [
 					id: 'tile1',
 					component: 'Tile',
 					props: {
-						Title: 'Rings of Saturn'
+						Title: 'Black Tongue'
 					}
 				},
 				{
 					id: 'tile1',
 					component: 'Tile',
 					props: {
-						Title: 'Rings of Saturn'
+						Title: 'Queen'
 					}
 				},
 				{

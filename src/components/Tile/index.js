@@ -1,3 +1,3 @@
-import Tile from './Tile';
+import Tile from './TileContainer';
 
 export default Tile;
