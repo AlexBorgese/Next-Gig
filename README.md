@@ -15,3 +15,7 @@ component: This is the component that the app will render. At the moment the onl
 Title: The name of the band you want to add. This is used in the query string that hits the spotify api
 
 Date: The date of the show you are going to. This does not change the order of the tiles (yet)
+
+### Preview
+
+![preview](./preview.png)
