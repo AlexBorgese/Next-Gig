@@ -1,6 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import Tile from './Tile';
+import LoginButton from '../LoginButton/LoginButton';
 
 const props = {
 	Title: 'Title',
@@ -16,9 +17,6 @@ describe('Given the Tile component', () => {
 
 	beforeEach(() => {
 		component = mount(<Tile {...props} />);
-	});
-	it('should render a tile with the correct text', () => {
-		expect(component.find('h1').text()).toEqual(props.Title);
 	});
 
 	describe('and there is data', () => {
@@ -36,6 +34,10 @@ describe('Given the Tile component', () => {
 					}
 				})
 			});
+		});
+
+		it('should render a tile with the correct text', () => {
+			expect(component.find('h1').text()).toEqual(props.Title);
 		});
 
 		it('should render the genres', () => {
@@ -59,11 +61,19 @@ describe('Given the Tile component', () => {
 		});
 
 		it('should NOT render the genres', () => {
-			expect(component.find('p').length).toEqual(0);
+			expect(component.contains('music ofc')).toEqual(false);
 		});
 
 		it('should NOT render the images', () => {
 			expect(component.find('img').length).toEqual(0);
+		});
+
+		it('render the loginButton', () => {
+			expect(component.find(LoginButton).length).toEqual(1);
+		});
+
+		it('render the login text', () => {
+			expect(component.find('.login-text').length).toEqual(1);
 		});
 	});
 });
